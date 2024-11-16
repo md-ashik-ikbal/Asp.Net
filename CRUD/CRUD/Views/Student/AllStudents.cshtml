@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AllStudents";
+}
+
+<h2>AllStudents</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Cgpa</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td> @i.Id </td>
+                <td> @i.Name </td>
+                <td> @i.Cgpa </td>
+                <td>
+                    <a href="/Student/Create" class="btn btn-outline-secondary">Add</a>
+                    <a href="/Student/StudentById/@i.Id" class="btn btn-outline-secondary">Details</a>
+                    <a href="/Student/Edit/@i.Id" class="btn btn-outline-primary">Edit</a>
+                    <a href="/Student/Remove/@i.Id" class="btn btn-outline-danger">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "StudentById";
+}
+
+<h2>StudentById</h2>
+
+<div>
+    <input type="text" name="Id" value="User Id: @Model.Id" disabled class="form-control text-center" />
+    <input type="text" name="Name" value="Name: @Model.Name" disabled class="form-control text-center mt-2" />
+    <input type="text" name="Cgpa" value="Cgpa: @Model.Cgpa" disabled class="form-control text-center mt-2" />
+    <a href="/Student/AllStudents" class="btn btn-outline-secondary mt-2">Back</a>
+</div>
+

@@ -1,0 +1,19 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crate</h2>
+
+@Model.Name
+@Model.Cgpa
+
+<form method="post" class="">
+    <input type="text" name="Name" value="@Model.Name" placeholder="Name" class="form-control" />
+    <small class="text-danger"> @Html.ValidationMessage("Name") </small>
+    <input type="text" name="Cgpa" value="@Model.Cgpa" placeholder="CGPA" class="form-control mt-2" />
+    <small class="text-danger"> @Html.ValidationMessage("Cgpa") </small> <br />
+    <input type="submit" value="Create" class="btn btn-outline-primary"/>
+</form>
+
